@@ -8,6 +8,9 @@ class Settings(BaseSettings):
     extra="ignore",
   )
 
+  openai_base_url: str = Field("https://api.openai.com/v1", alias="OPENAI_BASE_URL")
+  openrouter_base_url: str = Field("https://openrouter.ai/api/v1", alias="OPENROUTER_BASE_URL")
+
   llm_proxy_api_key: str = Field(..., alias="LLM_PROXY_API_KEY")
 
   openai_api_key: str | None = Field(None, alias="OPENAI_API_KEY")
