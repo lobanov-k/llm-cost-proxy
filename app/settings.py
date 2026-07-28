@@ -16,11 +16,8 @@ class Settings(BaseSettings):
   openai_api_key: str | None = Field(None, alias="OPENAI_API_KEY")
   openrouter_api_key: str | None = Field(None, alias="OPENROUTER_API_KEY")
 
-  # database_url: str = Field(
-  #   "sqlite:///./data/proxy.db",
-  #   alias="DATABASE_URL",
-  # )
-
+  database_url: str = Field("sqlite:///./data/proxy.db", alias="DATABASE_URL")
+  
   default_provider: str = Field("openai", alias="DEFAULT_PROVIDER")
   default_project: str = Field("default", alias="DEFAULT_PROJECT")
   default_agent: str = Field("default", alias="DEFAULT_AGENT")
