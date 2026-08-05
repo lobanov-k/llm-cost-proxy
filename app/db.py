@@ -17,6 +17,8 @@ def get_connection() -> sqlite3.Connection:
   connection = sqlite3.connect(db_path)
   connection.row_factory = sqlite3.Row
 
+  return connection
+
 # TODO (postmvp): lean to uuid as PRIMARY KEY
 def init_db() -> None:
   with get_connection() as connection:
